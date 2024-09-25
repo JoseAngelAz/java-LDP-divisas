@@ -18,8 +18,11 @@ public class App {
     
 // Método para obtener el tipo de cambio entre dos monedas
 private static double getExchangeRate(String fromCurrency, String toCurrency) {
-    String apiKey = "fe89cc1c5192d4dcf622a2da "; // Reemplaza con tu clave API
+    String apiKey = "443e71fc0304a07d11017c04"; // Reemplaza con tu clave API
     String apiUrl = "https://v6.exchangerate-api.com/v6/" + apiKey + "/pair/" + fromCurrency + "/" + toCurrency;
+    
+    //mostrar la url
+    System.out.println("la url queda así: "+ apiUrl);
 
     try {
         URL url = new URL(apiUrl);
@@ -81,6 +84,7 @@ public static double convertCurrency(String fromCurrency, String toCurrency, dou
         // Obtener la cantidad a convertir
         System.out.print("Introduce la cantidad a convertir: ");
         double amount = scanner.nextDouble();
+        
 
         // Realizar la conversión
         double convertedAmount = convertCurrency(fromCurrency, toCurrency, amount);
